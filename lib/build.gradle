@@ -66,4 +66,7 @@ ext {
     allLicenses = ["MIT"]
 }
 
+apply from: 'https://raw.githubusercontent.com/neonwarge04/jcenter-config/1.0.1/install.gradle'
+
+apply from: 'https://raw.githubusercontent.com/neonwarge04/jcenter-config/1.0.1/bintray.gradle'
 
