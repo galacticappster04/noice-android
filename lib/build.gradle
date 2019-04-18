@@ -43,36 +43,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
 
-Properties localProperties = new Properties()
-localProperties.load(project.rootProject.file('projectInfo.properties').newDataInputStream())
+apply from: 'https://raw.githubusercontent.com/neonwarge04/jcenter-config/1.0.2/install.gradle'
 
-ext {
-    bintrayRepo = 'noice'
-    bintrayName = 'noice-android'
-
-    publishedGroupId = localProperties.getProperty('info.publishGroupId')
-
-    libraryName = localProperties.getProperty('info.libraryName')
-
-    artifact = localProperties.getProperty('info.artifact')
-
-    libraryDescription = ''
-
-    siteUrl = localProperties.getProperty('info.siteUrl')
-    gitUrl = localProperties.getProperty('info.gitUrl')
-
-    libraryVersion = android.defaultConfig.versionName
-
-    developerId = localProperties.getProperty('info.developerId')
-    developerName = localProperties.getProperty('info.developerName')
-    developerEmail = localProperties.getProperty('info.developerEmail')
-
-    licenseName = localProperties.getProperty('info.licenseName')
-    licenseUrl = localProperties.getProperty('info.licenseUrl')
-    allLicenses = ["MIT"]
-}
-
-apply from: 'https://raw.githubusercontent.com/neonwarge04/jcenter-config/1.0.1/install.gradle'
-
-apply from: 'https://raw.githubusercontent.com/neonwarge04/jcenter-config/1.0.1/bintray.gradle'
-
+apply from: 'https://raw.githubusercontent.com/neonwarge04/jcenter-config/1.0.2/bintray.gradle'
